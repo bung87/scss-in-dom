@@ -1,4 +1,3 @@
-// @ts-nocheck
 import expect from 'expect.js';
 import { JSDOM } from 'jsdom';
 import { it } from 'mocha';

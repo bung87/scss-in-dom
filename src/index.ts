@@ -1,5 +1,4 @@
-// @ts-nocheck
-import {load} from 'cheerio';
+import { load } from 'cheerio';
 export default function(html: string) {
   const $ = load(html.trim(), {
     xmlMode: true,
@@ -14,7 +13,5 @@ export default function(html: string) {
     const originClass = $elem.attr('class');
     $elem.attr('class', originClass.replace(/&/g, className));
   });
-  return $.root().html() || "";
+  return $.root().html() || '';
 }
-
-// export {default as sid } from './rollup-plugin'

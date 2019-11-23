@@ -17,7 +17,8 @@
     ""
   ],
   "files": [
-    "dist/*"
+    "dist/*",
+    "types/*"
   ],
   "main": "dist/sind.cjs.js",
   "module": "dist/sind.js",
