@@ -1,7 +1,7 @@
 {
   "name": "sind",
   "version": "0.0.0",
-  "description": "write scss BEM style in temple",
+  "description": "write scss BEM style in template",
   "license": "MIT",
   "repository": "",
   "engines": {
