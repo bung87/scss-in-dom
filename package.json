@@ -1,0 +1,101 @@
+{
+  "name": "scss-in-dom",
+  "version": "0.0.0",
+  "description": "scss-in-dom",
+  "license": "MIT",
+  "repository": "",
+  "engines": {
+    "node": ">=10.0.0",
+    "yarn": ">=1.13.0"
+  },
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "keywords": [
+    ""
+  ],
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "main": "dist/scss-in-dom.cjs.js",
+  "module": "dist/scss-in-dom.js",
+  "browser": "dist/scss-in-dom.umd.js",
+  "scripts": {
+    "testplugin": "rollup -c test.config.ts",
+    "dist": "rollup -c rollup.config.ts",
+    "clean": "rimraf lib && rimraf coverage",
+    "format": "prettier --write \"{src,test,__tests__}/**/*.ts\" --single-quote --trailing-comma es5",
+    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
+    "prepublishOnly": "yarn run build",
+    "prebuild": "yarn run clean && yarn run format && yarn run lint && echo Using TypeScript && tsc --version",
+    "build": "tsc --sourceRoot src/ --pretty",
+    "test": "ts-mocha -p ./test/tsconfig.json",
+    "coverage": "jest --coverage",
+    "watch": "yarn run build -- --watch",
+    "watch:test": "jest --watch"
+  },
+  "dependencies": {
+    "acorn": "^7.1.0",
+    "cheerio": "^1.0.0-rc.3",
+    "estree-walker": "^0.9.0",
+    "magic-string": "^0.25.4",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-filesize": "^6.2.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.25.2",
+    "rollup-pluginutils": "^2.8.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@rollup/plugin-json": "^4.0.0",
+    "@types/cheerio": "^0.22.14",
+    "@types/estree": "^0.0.39",
+    "@types/expect.js": "^0.3.29",
+    "@types/jest": "^23.3.3",
+    "@types/jsdom": "^12.2.4",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.12",
+    "coveralls": "^3.0.2",
+    "expect.js": "^0.3.1",
+    "jest": "^23.6.0",
+    "jsdom": "^15.2.1",
+    "mocha": "^6.2.2",
+    "performance-now": "^2.1.0",
+    "prettier": "^1.14.3",
+    "rimraf": "^2.6.2",
+    "rollup": "^1.27.3",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-cleanup": "^3.1.1",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "scss-dom": "^0.2.1",
+    "ts-jest": "^23.10.3",
+    "ts-mocha": "^6.0.0",
+    "ts-node": "^8.5.2",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.1.1"
+  },
+  "mocha": {
+    "reporter": "list",
+    "spec": "test/*-spec.ts",
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {
+        "diagnostics": {
+          "ignoreCodes": [
+            "TS2531",
+            "TS7041"
+          ]
+        }
+      }
+    }
+  }
+}
