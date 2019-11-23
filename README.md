@@ -1,4 +1,4 @@
-# sind  
+# sind  ![npm: version](https://flat.badgen.net/npm/v/sind) ![David: dependencies](http://flat.badgen.net/david/dep/bung87/sind) ![npm: license](https://flat.badgen.net/npm/license/sind)
 
 scss in dom
 
