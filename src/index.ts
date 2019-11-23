@@ -14,7 +14,7 @@ export default function(html: string) {
     const originClass = $elem.attr('class');
     $elem.attr('class', originClass.replace(/&/g, className));
   });
-  return $.root().html();
+  return $.root().html() || "";
 }
 
 // export {default as sid } from './rollup-plugin'

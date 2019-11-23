@@ -13,6 +13,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "removeComments": true,
+    "noImplicitReturns":false,
     "strict": true,
     "typeRoots": [
       "node_modules/@types",

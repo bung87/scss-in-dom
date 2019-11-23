@@ -1,7 +1,7 @@
 {
-  "name": "scss-in-dom",
+  "name": "sind",
   "version": "0.0.0",
-  "description": "scss-in-dom",
+  "description": "write scss BEM style in temple",
   "license": "MIT",
   "repository": "",
   "engines": {
@@ -19,20 +19,17 @@
   "files": [
     "dist/*"
   ],
-  "main": "dist/scss-in-dom.cjs.js",
-  "module": "dist/scss-in-dom.js",
-  "browser": "dist/scss-in-dom.umd.js",
+  "main": "dist/sind.cjs.js",
+  "module": "dist/sind.js",
+  "browser": "dist/sind.umd.js",
   "scripts": {
-    "testplugin": "rollup -c test.config.ts",
     "dist": "rollup -c rollup.config.ts",
     "clean": "rimraf dist && rimraf coverage",
-    "format": "prettier --write \"{src,test,__tests__}/**/*.ts\" --single-quote --trailing-comma es5",
+    "format": "prettier --write \"{src,test}/**/*.ts\" --single-quote --trailing-comma es5",
     "lint": "tslint --force --format verbose \"src/**/*.ts\"",
-    "prepublishOnly": "yarn run build",
     "prebuild": "yarn run clean && yarn run format && yarn run lint && echo Using TypeScript && tsc --version",
-    "build": "tsc --sourceRoot src/ --pretty",
-    "test": "ts-mocha -p ./test/tsconfig.json",
-    "watch": "yarn run build -- --watch"
+    "test": "ts-mocha -p test/mocha.tsconfig.json",
+    "watch": "rollup -w rollup.config.ts"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",

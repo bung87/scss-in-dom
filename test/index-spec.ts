@@ -1,7 +1,7 @@
 // @ts-nocheck
 import expect from 'expect.js';
 import { JSDOM } from 'jsdom';
-import { it as test } from 'mocha';
+import { it } from 'mocha';
 import now from 'performance-now';
 import scssDom from 'scss-dom';
 import scssindom from '../src/index';
@@ -39,15 +39,11 @@ const html = `
 </div>
 `;
 
-test('test scssindom simple case', () => {
+it('can process simple BEM case template', () => {
   expect(scssindom(tpl).trim()).to.equal(html.trim());
 });
 
-test('test scssDom simple case', () => {
-  expect(scssdom(tpl).trim()).to.equal(html.trim());
-});
-
-test('test scssindom time cost less than scssDom', () => {
+it('time cost less than scssDom', () => {
   const t0 = now();
   scssindom(tpl);
   const t1 = now();
