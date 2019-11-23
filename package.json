@@ -17,8 +17,7 @@
     ""
   ],
   "files": [
-    "dist/*",
-    "src/*"
+    "dist/*"
   ],
   "main": "dist/scss-in-dom.cjs.js",
   "module": "dist/scss-in-dom.js",
@@ -26,19 +25,16 @@
   "scripts": {
     "testplugin": "rollup -c test.config.ts",
     "dist": "rollup -c rollup.config.ts",
-    "clean": "rimraf lib && rimraf coverage",
+    "clean": "rimraf dist && rimraf coverage",
     "format": "prettier --write \"{src,test,__tests__}/**/*.ts\" --single-quote --trailing-comma es5",
     "lint": "tslint --force --format verbose \"src/**/*.ts\"",
     "prepublishOnly": "yarn run build",
     "prebuild": "yarn run clean && yarn run format && yarn run lint && echo Using TypeScript && tsc --version",
     "build": "tsc --sourceRoot src/ --pretty",
     "test": "ts-mocha -p ./test/tsconfig.json",
-    "coverage": "jest --coverage",
-    "watch": "yarn run build -- --watch",
-    "watch:test": "jest --watch"
+    "watch": "yarn run build -- --watch"
   },
   "dependencies": {
-    "acorn": "^7.1.0",
     "cheerio": "^1.0.0-rc.3",
     "estree-walker": "^0.9.0",
     "magic-string": "^0.25.4",
@@ -54,13 +50,10 @@
     "@types/cheerio": "^0.22.14",
     "@types/estree": "^0.0.39",
     "@types/expect.js": "^0.3.29",
-    "@types/jest": "^23.3.3",
     "@types/jsdom": "^12.2.4",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.12.12",
-    "coveralls": "^3.0.2",
     "expect.js": "^0.3.1",
-    "jest": "^23.6.0",
     "jsdom": "^15.2.1",
     "mocha": "^6.2.2",
     "performance-now": "^2.1.0",
@@ -71,7 +64,6 @@
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-node-builtins": "^2.1.2",
     "scss-dom": "^0.2.1",
-    "ts-jest": "^23.10.3",
     "ts-mocha": "^6.0.0",
     "ts-node": "^8.5.2",
     "tslint": "^5.11.0",
@@ -84,18 +76,5 @@
     "require": [
       "ts-node/register"
     ]
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "globals": {
-      "ts-jest": {
-        "diagnostics": {
-          "ignoreCodes": [
-            "TS2531",
-            "TS7041"
-          ]
-        }
-      }
-    }
   }
 }
