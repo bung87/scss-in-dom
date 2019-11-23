@@ -132,13 +132,6 @@
   dependencies:
     rollup-pluginutils "^2.5.0"
 
-"@types/cheerio@^0.22.14":
-  version "0.22.14"
-  resolved "http://r.cnpmjs.org/@types/cheerio/download/@types/cheerio-0.22.14.tgz#d150889891e7db892c6a0b16bd5583cc70b3fc44"
-  integrity sha1-0VCImJHn24ksagsWvVWDzHCz/EQ=
-  dependencies:
-    "@types/node" "*"
-
 "@types/estree@*", "@types/estree@0.0.39", "@types/estree@^0.0.39":
   version "0.0.39"
   resolved "http://r.cnpmjs.org/@types/estree/download/@types/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"

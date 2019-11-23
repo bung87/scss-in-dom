@@ -15,7 +15,7 @@ const nodePlugins = [
     resolve(),
     // string({ include: '**/*.md' }),
     typescript({ useTsconfigDeclarationDir: true }),
-    commonjs({ include: "node_modules/**" }),
+    commonjs({ include: "node_modules/**", namedExports: { 'cheerio': ['load']}}),
     babel({
         exclude: "node_modules/**"
       }),

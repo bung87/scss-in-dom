@@ -1,6 +1,6 @@
-import { load } from 'cheerio';
+import * as cheerio from 'cheerio';
 export default function(html: string) {
-  const $ = load(html.trim(), {
+  const $ = cheerio.load(html.trim(), {
     xmlMode: true,
   });
   const scssElems = $.root().find("[class*='&']");

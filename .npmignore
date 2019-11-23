@@ -23,6 +23,5 @@ lib_test
 
 # npmignore
 
-src/
 __tests__/
 .vscode/
