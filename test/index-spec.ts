@@ -37,9 +37,33 @@ const html = `
   </div>
 </div>
 `;
+const tpl2 = `
+<div class="leaflet&-header other-class">
+  <div class="@at-root&-menu">
+    <div class="&__item">1</div>
+    <div class="&__item">2</div>
+    <div class="&__item">3</div>
+    <div class="&__item">4</div>
+  </div>
+</div>
+`;
+const html2 =`
+<div class="leaflet-header other-class">
+  <div class="leaflet-menu">
+    <div class="leaflet-menu__item">1</div>
+    <div class="leaflet-menu__item">2</div>
+    <div class="leaflet-menu__item">3</div>
+    <div class="leaflet-menu__item">4</div>
+  </div>
+</div>
+`;
 
 it('can process simple BEM case template', () => {
   expect(scssindom(tpl).trim()).to.equal(html.trim());
+});
+
+it('can process complex scss template', () => {
+  expect(scssindom(tpl2).trim()).to.equal(html2.trim());
 });
 
 it('time cost less than scssDom', () => {

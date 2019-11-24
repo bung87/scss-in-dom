@@ -23,6 +23,18 @@ turns to
 ``` js
 "<div class=\"header other-class\">\n  <div class=\"header-menu\">\n    <div class=\"header-menu__item\">1</div>\n    <div class=\"header-menu__item\">2</div>\n    <div class=\"header-menu__item\">3</div>\n    <div class=\"header-menu__item\">4</div>\n  </div>\n</div>";
 ```
+more complex case
+``` html
+<div class="leaflet&-header other-class">
+  <div class="@at-root&-menu">
+    <div class="&__item">1</div>
+    <div class="&__item">2</div>
+    <div class="&__item">3</div>
+    <div class="&__item">4</div>
+  </div>
+</div>
+```
+
 ## with rollup compile at build time  
 
 [rollup-plugin-sind](https://github.com/bung87/rollup-plugin-sind)
