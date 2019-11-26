@@ -1,6 +1,6 @@
-# sind  ![npm: version](https://flat.badgen.net/npm/v/sind) ![David: dependencies](http://flat.badgen.net/david/dep/bung87/sind) ![npm: license](https://flat.badgen.net/npm/license/sind)
+# sind  [![npm: version][npm-version]](https://www.npmjs.com/package/sind) ![David: dependencies](https://flat.badgen.net/david/dep/bung87/sind) ![npm: license](https://flat.badgen.net/npm/license/sind)
 
-scss in dom
+write scss BEM style in template
 
 ## usage  
 
@@ -42,3 +42,5 @@ more complex case
 ## Acknowledgments
 
 sind was inspired by [scss-dom](https://github.com/aykutkardas/scss-dom)
+
+[npm-version]:https://flat.badgen.net/npm/v/sind
