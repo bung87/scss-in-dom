@@ -47,7 +47,7 @@ const tpl2 = `
   </div>
 </div>
 `;
-const html2 =`
+const html2 = `
 <div class="leaflet-header other-class">
   <div class="leaflet-menu">
     <div class="leaflet-menu__item">1</div>
