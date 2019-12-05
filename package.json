@@ -1,6 +1,6 @@
 {
   "name": "sind",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "write scss BEM style in template",
   "license": "MIT",
   "repository": "https://github.com/bung87/sind",
@@ -30,6 +30,7 @@
     "format": "prettier --write \"{src,test}/**/*.ts\" --single-quote --trailing-comma es5",
     "lint": "tslint --force --format verbose \"src/**/*.ts\"",
     "prebuild": "yarn run clean && yarn run format && yarn run lint && echo Using TypeScript && tsc --version",
+    "prepublishOnly": "yarn run prebuild && yarn run dist",
     "test": "ts-mocha -p test/mocha.tsconfig.json",
     "watch": "rollup -w rollup.config.ts"
   },

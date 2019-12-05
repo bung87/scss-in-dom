@@ -26,9 +26,6 @@ export default function(html: string) {
     if ($parent.length > 0) {
       const parentClass = $parent.attr('class').split(' ')[0];
       className = $elem.attr('class').split(' ')[0] || '';
-      if (parentClass.indexOf('@at-root&') !== -1) {
-        $elem.attr('class', originClass.replace('@at-root&', parentClass));
-      }
       if (className.indexOf('@at-root&') !== -1) {
         $elem.attr('class', originClass.replace('@at-root&', rootNamespace));
       } else {
